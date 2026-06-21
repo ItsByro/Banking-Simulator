@@ -7,7 +7,7 @@ This is "ShinyBills": A Desktop Banking Simulation, simulating what a real bank/
 * **Deposit**: Add funds to your account balance with input validation (rejects invalid/negative amounts).
 * **Withdrawal**: Withdraw funds with balance checks to prevent overdrawing.
   
-* All users will be stored **locally** in their PC via a ".txt" file [can be find via: "Banking_Simulator_App/bin/debug/UserDatabase.txt"].
+* All users will be stored **locally** in their PC via a ".txt" file [can be found via: "Banking_Simulator_App/bin/Debug/UserDatabase.txt"].
 
 # Incoming Features Being Implemented
 * Transfer Funds — let users send money between accounts.
