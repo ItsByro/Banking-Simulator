@@ -66,6 +66,10 @@
     <Compile Include="Sign_Up_Form.Designer.cs">
       <DependentUpon>Sign_Up_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="TransferFundForm.cs" />
+    <Compile Include="TransferFundForm.Designer.cs">
+      <DependentUpon>TransferFundForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserDataBase.cs" />
     <Compile Include="WithdrawForm.cs" />
     <Compile Include="WithdrawForm.Designer.cs">
@@ -87,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sign_Up_Form.resx">
       <DependentUpon>Sign_Up_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferFundForm.resx">
+      <DependentUpon>TransferFundForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WithdrawForm.resx">
       <DependentUpon>WithdrawForm.cs</DependentUpon>

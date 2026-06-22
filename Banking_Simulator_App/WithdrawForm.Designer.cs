@@ -123,7 +123,7 @@ namespace Banking_Simulator_App
 			this.MaximizeBox = false;
 			this.Name = "WithdrawForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "WithdrawForm";
+			this.Text = "Withdraw Form";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}

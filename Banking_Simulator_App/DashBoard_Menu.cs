@@ -45,5 +45,14 @@ namespace Banking_Simulator_App
 		{
 			RefreshBoardData();
 		}
+		
+		void BtnTransferFundsClick(object sender, EventArgs e)
+		{
+			this.Hide();
+			TransferFundForm TransferFund_Form = new TransferFundForm();
+			TransferFund_Form.ShowDialog();
+			this.Show();
+			RefreshBoardData();
+		}
 	}
 }

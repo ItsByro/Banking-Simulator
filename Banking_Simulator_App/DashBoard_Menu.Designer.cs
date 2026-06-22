@@ -85,7 +85,7 @@ namespace Banking_Simulator_App
 			// 
 			this.btnTransaction.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.btnTransaction.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnTransaction.Location = new System.Drawing.Point(59, 308);
+			this.btnTransaction.Location = new System.Drawing.Point(257, 298);
 			this.btnTransaction.Name = "btnTransaction";
 			this.btnTransaction.Size = new System.Drawing.Size(151, 102);
 			this.btnTransaction.TabIndex = 4;
@@ -127,12 +127,13 @@ namespace Banking_Simulator_App
 			// 
 			this.btnTransferFunds.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.btnTransferFunds.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnTransferFunds.Location = new System.Drawing.Point(257, 308);
+			this.btnTransferFunds.Location = new System.Drawing.Point(59, 298);
 			this.btnTransferFunds.Name = "btnTransferFunds";
 			this.btnTransferFunds.Size = new System.Drawing.Size(151, 102);
 			this.btnTransferFunds.TabIndex = 8;
 			this.btnTransferFunds.Text = "Transfer Funds";
 			this.btnTransferFunds.UseVisualStyleBackColor = false;
+			this.btnTransferFunds.Click += new System.EventHandler(this.BtnTransferFundsClick);
 			// 
 			// DashBoard_Menu
 			// 
