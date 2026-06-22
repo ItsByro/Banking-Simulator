@@ -10,10 +10,6 @@ using System.Windows.Forms;
 
 namespace Banking_Simulator_App
 {
-	/// <summary>
-	/// Description of WithdrawForm.
-	/// Withdraws money to user's balance
-	/// </summary>
 	public partial class WithdrawForm : Form
 	{
 		double WithdrawalMoney;
