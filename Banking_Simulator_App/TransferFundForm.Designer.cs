@@ -39,12 +39,16 @@ namespace Banking_Simulator_App
 			this.label1 = new System.Windows.Forms.Label();
 			this.lblTermsConditions = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
+			this.tbxRecipientEmail = new System.Windows.Forms.TextBox();
+			this.tbx_AmountInputted = new System.Windows.Forms.TextBox();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// button1
 			// 
 			this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.Location = new System.Drawing.Point(114, 278);
+			this.button1.Location = new System.Drawing.Point(150, 288);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(185, 79);
 			this.button1.TabIndex = 1;
@@ -88,11 +92,49 @@ namespace Banking_Simulator_App
 			this.label3.TabIndex = 5;
 			this.label3.Text = "Transfers cannot be reversed once sent.";
 			// 
+			// tbxRecipientEmail
+			// 
+			this.tbxRecipientEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tbxRecipientEmail.Location = new System.Drawing.Point(36, 44);
+			this.tbxRecipientEmail.Name = "tbxRecipientEmail";
+			this.tbxRecipientEmail.Size = new System.Drawing.Size(405, 44);
+			this.tbxRecipientEmail.TabIndex = 6;
+			// 
+			// tbx_AmountInputted
+			// 
+			this.tbx_AmountInputted.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tbx_AmountInputted.Location = new System.Drawing.Point(36, 142);
+			this.tbx_AmountInputted.Name = "tbx_AmountInputted";
+			this.tbx_AmountInputted.Size = new System.Drawing.Size(405, 44);
+			this.tbx_AmountInputted.TabIndex = 7;
+			// 
+			// label2
+			// 
+			this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.Location = new System.Drawing.Point(36, 13);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(374, 28);
+			this.label2.TabIndex = 8;
+			this.label2.Text = "Enter the email you want to transfer:\r\n";
+			// 
+			// label4
+			// 
+			this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label4.Location = new System.Drawing.Point(36, 111);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(374, 28);
+			this.label4.TabIndex = 9;
+			this.label4.Text = "Amount you want to input:";
+			// 
 			// TransferFundForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(485, 379);
+			this.Controls.Add(this.label4);
+			this.Controls.Add(this.label2);
+			this.Controls.Add(this.tbx_AmountInputted);
+			this.Controls.Add(this.tbxRecipientEmail);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.lblTermsConditions);
 			this.Controls.Add(this.label1);
@@ -104,7 +146,12 @@ namespace Banking_Simulator_App
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Transfer Fund Form";
 			this.ResumeLayout(false);
+			this.PerformLayout();
 		}
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.TextBox tbx_AmountInputted;
+		private System.Windows.Forms.TextBox tbxRecipientEmail;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label lblTermsConditions;
 		private System.Windows.Forms.Label label1;
