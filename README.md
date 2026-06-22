@@ -18,7 +18,7 @@ This is "ShinyBills": A Desktop Banking Simulation, simulating what a real bank/
 
 # Notes / Security Notes
 - This is an Active Learning Project for C#, so expect rougher edges and security risks.
-- This is NOT a Production System.
+- This is NOT a Production System only a mere learning project by myself.
   
 More known issues:
 - Password only stored locally and in plain text.
@@ -28,6 +28,6 @@ More known issues:
 - SharpDevelop v4.5.1
 - Language: C#
 - UI Framework: WinForms
-- Data Persistence: Pipe-delimited text files
+- Data Persistence: text file (.txt)
 
   
