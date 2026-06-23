@@ -45,5 +45,16 @@ namespace Banking_Simulator_App
 			);
 						
 		}
+		
+		void BtnTransferFundsClick(object sender, EventArgs e)
+		{
+			if (!checkboxTermsCondition.Checked) 
+			{
+				MessageBox.Show("You must Agreed to Terms and Conditions.", "Warning",MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+			
+			MessageBox.Show("You agreed");
+		}
 	}
 }

@@ -34,8 +34,8 @@ namespace Banking_Simulator_App
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.button1 = new System.Windows.Forms.Button();
-			this.checkBox1 = new System.Windows.Forms.CheckBox();
+			this.btnTransferFunds = new System.Windows.Forms.Button();
+			this.checkboxTermsCondition = new System.Windows.Forms.CheckBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.lblTermsConditions = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
@@ -45,23 +45,24 @@ namespace Banking_Simulator_App
 			this.label4 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
-			// button1
+			// btnTransferFunds
 			// 
-			this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.Location = new System.Drawing.Point(150, 288);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(185, 79);
-			this.button1.TabIndex = 1;
-			this.button1.Text = "Transfer";
-			this.button1.UseVisualStyleBackColor = true;
+			this.btnTransferFunds.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnTransferFunds.Location = new System.Drawing.Point(150, 288);
+			this.btnTransferFunds.Name = "btnTransferFunds";
+			this.btnTransferFunds.Size = new System.Drawing.Size(185, 79);
+			this.btnTransferFunds.TabIndex = 1;
+			this.btnTransferFunds.Text = "Transfer";
+			this.btnTransferFunds.UseVisualStyleBackColor = true;
+			this.btnTransferFunds.Click += new System.EventHandler(this.BtnTransferFundsClick);
 			// 
-			// checkBox1
+			// checkboxTermsCondition
 			// 
-			this.checkBox1.Location = new System.Drawing.Point(23, 209);
-			this.checkBox1.Name = "checkBox1";
-			this.checkBox1.Size = new System.Drawing.Size(450, 63);
-			this.checkBox1.TabIndex = 2;
-			this.checkBox1.UseVisualStyleBackColor = true;
+			this.checkboxTermsCondition.Location = new System.Drawing.Point(23, 209);
+			this.checkboxTermsCondition.Name = "checkboxTermsCondition";
+			this.checkboxTermsCondition.Size = new System.Drawing.Size(450, 63);
+			this.checkboxTermsCondition.TabIndex = 2;
+			this.checkboxTermsCondition.UseVisualStyleBackColor = true;
 			// 
 			// label1
 			// 
@@ -138,8 +139,8 @@ namespace Banking_Simulator_App
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.lblTermsConditions);
 			this.Controls.Add(this.label1);
-			this.Controls.Add(this.checkBox1);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.checkboxTermsCondition);
+			this.Controls.Add(this.btnTransferFunds);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
 			this.MaximizeBox = false;
 			this.Name = "TransferFundForm";
@@ -155,7 +156,7 @@ namespace Banking_Simulator_App
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label lblTermsConditions;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.CheckBox checkBox1;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.CheckBox checkboxTermsCondition;
+		private System.Windows.Forms.Button btnTransferFunds;
 	}
 }

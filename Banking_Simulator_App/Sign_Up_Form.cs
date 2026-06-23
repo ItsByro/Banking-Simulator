@@ -28,47 +28,47 @@ namespace Banking_Simulator_App
 			
 			if (email == "") 
 			{
-				MessageBox.Show("No email Given.");
+				MessageBox.Show("No email Given.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			else if (username == "")
 			{
-				MessageBox.Show("No username Given.");
+				MessageBox.Show("No username Given.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			else if (phonenumber == "")
 			{
-				MessageBox.Show("No Phone Number Given.");
+				MessageBox.Show("No Phone Number Given.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			else if (password == "")
 			{
-				MessageBox.Show("No Password Given.");
+				MessageBox.Show("No Password Given.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			else if (email.Contains("@") == false)
 			{
-				MessageBox.Show("Incorrect Email.");
+				MessageBox.Show("Incorrect Email.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			else if (UserDataBase.UserExists(email))
 			{
-				MessageBox.Show("User Exist, maybe you type wrong?.");
+				MessageBox.Show("User Exist, maybe you type wrong?.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			else if(password != ConfirmPass)
 			{
-				MessageBox.Show("Password Incorrect [Different to the one you input].");
+				MessageBox.Show("Password Incorrect [Different to the one you input].", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			else if(!long.TryParse(phonenumber, out number))
 			{
-				MessageBox.Show("Error not a phone number.");
+				MessageBox.Show("Error not a phone number.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			
 			UserDataBase.SaveUser(username, email, phonenumber, password);
-			MessageBox.Show("Account created!");
+			MessageBox.Show("Account created!", "Account Created", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			this.Close();
 		}
 		

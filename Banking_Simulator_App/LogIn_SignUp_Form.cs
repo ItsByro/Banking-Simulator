@@ -42,36 +42,36 @@ namespace Banking_Simulator_App
 			//checks if user has no email written
 			if (email == "") 
 			{
-				MessageBox.Show("Enter your email.");
+				MessageBox.Show("Enter your email.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			//checks if user password was not written
 			else if (password == "")
 			{
-				MessageBox.Show("Enter your password.");
+				MessageBox.Show("Enter your password.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			//chekcs if email doesn't even have an '@'.
 			else if (!email.Contains("@"))
 			{
-				MessageBox.Show("Incorrect Format of Email [Missing '@'].");
+				MessageBox.Show("Incorrect Format of Email [Missing '@'].", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			//checks if user email doesnt exist in the "UserDatabase.txt"
 			else if (!UserDataBase.UserExists(email))
 			{
-				MessageBox.Show("Cannot Verify Sign Up First");
+				MessageBox.Show("Cannot Verify Sign Up First", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			//checks if the written email/password has a typo/incorrect.
 			else if (!UserDataBase.LogInUser(email, password))
 			{
-				MessageBox.Show("Incorrect Password / Email");
+				MessageBox.Show("Incorrect Password / Email", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			
 			//if all was pass, auto direct to another windows form named: "DashBoard_Menu.cs"
-			MessageBox.Show("Welcome back!");
+			MessageBox.Show("Welcome back!", "Welcome Back!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			DashBoard_Menu Dashboard = new DashBoard_Menu();
 			Dashboard.FormClosed += (s, args) => this.Show();
 			Dashboard.Show();

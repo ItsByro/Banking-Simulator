@@ -23,12 +23,12 @@ namespace Banking_Simulator_App
 		{
 			if (!double.TryParse(tbxDepositMoney.Text, out DepositedMoney)) 
 			{
-				MessageBox.Show("Invalid, input a number.");
+				MessageBox.Show("Invalid, input a number.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			else if (DepositedMoney <= 0)
 			{
-				MessageBox.Show("Input must be greater than 0.");
+				MessageBox.Show("Input must be greater than 0.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			
@@ -41,7 +41,7 @@ namespace Banking_Simulator_App
 				Session.Balance = anticipitatedBalance;	
 				UserDataBase.UpdateBalance(Session.Email, Session.Balance);			
 							
-				MessageBox.Show("Money Deposited to your Account.");
+				MessageBox.Show("Money Deposited to your Account.", "Balance Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				tbxDepositMoney.Clear();
 				this.Close();
 			} 
@@ -49,7 +49,7 @@ namespace Banking_Simulator_App
 			{
 				//if an issue confirms, revert to the last balance.
 				Session.Balance = OldBalance;
-				MessageBox.Show(string.Format("Transaction failed. Could not connect to the database. Please try again. {0}", ex.Message));
+				MessageBox.Show(string.Format("Transaction failed. Could not connect to the database. Please try again. {0}", ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error));
 			}
 		}
 	}

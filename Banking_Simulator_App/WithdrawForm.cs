@@ -23,17 +23,17 @@ namespace Banking_Simulator_App
 		{
 			if (!double.TryParse(tbxWithdrawMoney.Text, out WithdrawalMoney)) 
 			{
-				MessageBox.Show("Invalid: Input a Number.");
+				MessageBox.Show("Invalid: Input a Number.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			if (WithdrawalMoney <= 0) 
 			{
-				MessageBox.Show("Number Input cannot processed.");
+				MessageBox.Show("Number Input cannot processed.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			if (WithdrawalMoney > Session.Balance)
 			{
-				MessageBox.Show("Cannot processed due to insufficient funds");
+				MessageBox.Show("Cannot processed due to insufficient funds", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			
@@ -45,7 +45,7 @@ namespace Banking_Simulator_App
 				Session.Balance = AnticipitatedMoney;
 				UserDataBase.UpdateBalance(Session.Email, Session.Balance);
 				
-				MessageBox.Show("Balance has been deducted from your withdrawal.");
+				MessageBox.Show("Balance has been deducted from your withdrawal.", "Balance Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				tbxWithdrawMoney.Clear();
 				this.Close();
 			} 
@@ -53,7 +53,7 @@ namespace Banking_Simulator_App
 			{
 				//if an issue confirms, revert to the last balance.
 				Session.Balance = OldBalance;
-				MessageBox.Show(string.Format("Transaction failed. Could not connect to the database. Please try again. {0}", ex.Message));
+				MessageBox.Show(string.Format("Transaction failed. Could not connect to the database. Please try again. {0}", ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error));
 			}
 		}
 	}
