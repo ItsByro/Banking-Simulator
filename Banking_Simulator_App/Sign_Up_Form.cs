@@ -75,7 +75,20 @@ namespace Banking_Simulator_App
 		//guides user what to put in the txtbox
 		void HelpFuncClick(object sender, EventArgs e)
 		{
-			MessageBox.Show("Username:\nYour username that will be used in the Bank Simulator\n\nEmail:\nEnter your email address\n\nPhone Number:\nEnter your Phone Number\n\nPassword:\nEnter your password\n(Recommended at 8 characters)\n\nConfirm your Password:\nJust repeat the password you write:}");
+			MessageBox.Show("Username:\n"+
+			                "Your username that will be used in the Bank Simulator\n\n"+
+			                "Email:\n"+
+			                "Enter your email address\n\n"+
+			                "Phone Number:\n"+
+			                "Enter your Phone Number\n\n"+
+			                "Password:\n"+
+			                "Enter your password\n(Recommended at 8 characters)\n\n"+
+			                "Confirm your Password:\n"+
+			                "Just repeat the password you write:}",
+			                "Stuck? Let Me Help You",
+			                MessageBoxButtons.OK,
+			                MessageBoxIcon.Information
+			               );
 		}
 		
 		void TxbPhoneNumberKeyPress(object sender, KeyPressEventArgs e)
