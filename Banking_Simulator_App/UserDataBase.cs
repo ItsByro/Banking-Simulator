@@ -72,7 +72,7 @@ namespace Banking_Simulator_App
 			return false;
 		}
 		
-		//update balances based ojn changes from the session class
+		//update balances based on changes from the session class
 		public static void UpdateBalance(string email, double newBalance)
 		{
 			if (File.Exists("UserDatabase.txt") == false)
@@ -91,6 +91,26 @@ namespace Banking_Simulator_App
 				}
 			}
 			File.WriteAllLines("UserDatabase.txt", lines);
+		}
+		
+		public static double GetBalance(string email)
+		{
+			if (!File.Exists("UserDatabase.txt"))
+			{
+				return -1;
+			}
+			
+			string[] lines = File.ReadAllLines("UserDatabase.txt");
+			
+			foreach (string line in lines) 
+			{
+				string[] parts = line.Split('|');
+				if (parts[1] == email) 
+				{
+					return double.Parse(parts[4]);
+				}
+			}
+			return -1;
 		}
 	}
 }

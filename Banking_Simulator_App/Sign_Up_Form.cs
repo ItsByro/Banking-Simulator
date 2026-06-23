@@ -26,22 +26,22 @@ namespace Banking_Simulator_App
 			string ConfirmPass = txbConfirmPass.Text;
 			long number = 0;
 			
-			if (email == "") 
+			if (string.IsNullOrWhiteSpace(email))
 			{
 				MessageBox.Show("No email Given.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
-			else if (username == "")
+			else if (string.IsNullOrWhiteSpace(username))
 			{
 				MessageBox.Show("No username Given.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
-			else if (phonenumber == "")
+			else if (string.IsNullOrWhiteSpace(phonenumber))
 			{
 				MessageBox.Show("No Phone Number Given.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
-			else if (password == "")
+			else if (string.IsNullOrWhiteSpace(password))
 			{
 				MessageBox.Show("No Password Given.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;

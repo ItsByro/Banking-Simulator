@@ -48,13 +48,55 @@ namespace Banking_Simulator_App
 		
 		void BtnTransferFundsClick(object sender, EventArgs e)
 		{
-			if (!checkboxTermsCondition.Checked) 
+			string RecipientEmail = tbxRecipientEmail.Text;
+			double TransferAmount;
+			
+			//checks if there is empty spaces of textbox
+			if (string.IsNullOrWhiteSpace(RecipientEmail) || string.IsNullOrWhiteSpace(tbx_AmountInputted.Text)) 
 			{
-				MessageBox.Show("You must Agreed to Terms and Conditions.", "Warning",MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show("Input First the Recipient Email / Amount to transfer");
 				return;
 			}
+			//checks if the terms and condition is checked
+			if (!checkboxTermsCondition.Checked) 
+			{
+				MessageBox.Show("You must read the Terms and Conditions.", "Warning",MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+			//checks if the inputted is number not a string
+			if(!double.TryParse(tbx_AmountInputted.Text, out TransferAmount))
+			{
+				MessageBox.Show("Invalid: Input a Number.", "WARNING",MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+			//checks if the inputed number is 0 or even -
+			if(TransferAmount <= 0)
+			{
+				MessageBox.Show("Invalid: Must be greater than 0","WARNING", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+			//checks if the recipients is the same, if yes, provide a message
+			if(RecipientEmail == Session.Email)
+			{
+				MessageBox.Show("Invalid: Cannot Transfer To yourself","WARNING", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+			//checks if the recipient is already have an account, if not, provide a message
+			if(!UserDataBase.UserExists(RecipientEmail))
+			{
+				MessageBox.Show("Recipient Cannot Found.", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}
+			//checks if the transferrer have sufficient balance
+			if(TransferAmount > Session.Balance)
+			{
+				MessageBox.Show("Insufficient Funds","WARNING" ,MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return;
+			}			
 			
-			MessageBox.Show("You agreed");
+
+			
+			//if nothing and all correct it will proceeds
 		}
 	}
 }

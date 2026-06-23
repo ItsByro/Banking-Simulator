@@ -40,13 +40,13 @@ namespace Banking_Simulator_App
 			string password = txtPassword.Text;
 			
 			//checks if user has no email written
-			if (email == "") 
+			if (string.IsNullOrWhiteSpace(email))
 			{
 				MessageBox.Show("Enter your email.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 			//checks if user password was not written
-			else if (password == "")
+			else if (string.IsNullOrWhiteSpace(password))
 			{
 				MessageBox.Show("Enter your password.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
