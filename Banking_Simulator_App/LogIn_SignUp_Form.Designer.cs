@@ -42,6 +42,7 @@ namespace Banking_Simulator_App
 			this.btnSignUp = new System.Windows.Forms.Button();
 			this.btnLogIn = new System.Windows.Forms.Button();
 			this.label4 = new System.Windows.Forms.Label();
+			this.btnExitPage = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// lblTitle
@@ -96,9 +97,9 @@ namespace Banking_Simulator_App
 			this.btnSignUp.BackColor = System.Drawing.Color.LemonChiffon;
 			this.btnSignUp.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSignUp.ForeColor = System.Drawing.Color.Black;
-			this.btnSignUp.Location = new System.Drawing.Point(90, 341);
+			this.btnSignUp.Location = new System.Drawing.Point(25, 341);
 			this.btnSignUp.Name = "btnSignUp";
-			this.btnSignUp.Size = new System.Drawing.Size(184, 96);
+			this.btnSignUp.Size = new System.Drawing.Size(184, 80);
 			this.btnSignUp.TabIndex = 5;
 			this.btnSignUp.Text = "Sign Up";
 			this.btnSignUp.UseVisualStyleBackColor = false;
@@ -110,9 +111,9 @@ namespace Banking_Simulator_App
 			this.btnLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnLogIn.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnLogIn.ForeColor = System.Drawing.Color.Black;
-			this.btnLogIn.Location = new System.Drawing.Point(356, 341);
+			this.btnLogIn.Location = new System.Drawing.Point(248, 341);
 			this.btnLogIn.Name = "btnLogIn";
-			this.btnLogIn.Size = new System.Drawing.Size(184, 96);
+			this.btnLogIn.Size = new System.Drawing.Size(184, 80);
 			this.btnLogIn.TabIndex = 6;
 			this.btnLogIn.Text = "Log In";
 			this.btnLogIn.UseVisualStyleBackColor = false;
@@ -127,12 +128,27 @@ namespace Banking_Simulator_App
 			this.label4.Text = "ItsByro";
 			this.label4.Click += new System.EventHandler(this.Label4Click);
 			// 
+			// btnExitPage
+			// 
+			this.btnExitPage.BackColor = System.Drawing.Color.LemonChiffon;
+			this.btnExitPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnExitPage.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnExitPage.ForeColor = System.Drawing.Color.Black;
+			this.btnExitPage.Location = new System.Drawing.Point(474, 341);
+			this.btnExitPage.Name = "btnExitPage";
+			this.btnExitPage.Size = new System.Drawing.Size(121, 80);
+			this.btnExitPage.TabIndex = 8;
+			this.btnExitPage.Text = "Exit";
+			this.btnExitPage.UseVisualStyleBackColor = false;
+			this.btnExitPage.Click += new System.EventHandler(this.BtnExitPageClick);
+			// 
 			// LogIn_SignUp_Form
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.SeaShell;
 			this.ClientSize = new System.Drawing.Size(623, 479);
+			this.Controls.Add(this.btnExitPage);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.btnLogIn);
 			this.Controls.Add(this.btnSignUp);
@@ -150,6 +166,7 @@ namespace Banking_Simulator_App
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Button btnExitPage;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Button btnLogIn;
 		private System.Windows.Forms.Button btnSignUp;

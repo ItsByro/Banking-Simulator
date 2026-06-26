@@ -79,5 +79,10 @@ namespace Banking_Simulator_App
 			txtPassword.Clear();
 			txtEmailAddress.Clear();
 		}
+		
+		void BtnExitPageClick(object sender, EventArgs e)
+		{
+			this.Close();
+		}
 	}
 }
