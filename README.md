@@ -6,10 +6,10 @@ This is "**ShinyBills**": A Desktop Banking Simulation, simulating what a real b
 * **Deposit**: Add funds to your account balance with input validation (rejects invalid/negative amounts).
 * **Withdrawal**: Withdraw funds with balance checks to prevent overdrawing.
 * **Transfer Funds**: Let users send money between accounts locally.
+* **Transaction History** — view your transaction history like deposit, withdraw, and even transfer funds.
 * All users will be stored **locally** in their PC via a ".txt" file [can be found via: "Banking_Simulator_App/bin/Debug/UserDatabase.txt"].
 
 ### Incoming Features Being Implemented
-* **Transaction History** — view your transaction history like deposit, withdraw, and even transfer funds.
 * A Randomized PIN given by the system to simulate a real ATM.
 
 ### STATUS 
