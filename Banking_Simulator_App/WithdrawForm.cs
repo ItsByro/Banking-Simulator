@@ -48,7 +48,6 @@ namespace Banking_Simulator_App
 				
 				MessageBox.Show("Balance has been deducted from your withdrawal.", "Balance Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				tbxWithdrawMoney.Clear();
-				this.Close();
 			} 
 			catch (Exception ex)
 			{
@@ -56,6 +55,11 @@ namespace Banking_Simulator_App
 				Session.Balance = OldBalance;
 				MessageBox.Show(string.Format("Transaction failed. Could not connect to the database. Please try again. {0}", ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error));
 			}
+		}
+		
+		void BtnExitClick(object sender, EventArgs e)
+		{
+			this.Close();
 		}
 	}
 }

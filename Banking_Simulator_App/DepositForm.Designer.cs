@@ -41,6 +41,7 @@ namespace Banking_Simulator_App
 			this.btnDeposit = new System.Windows.Forms.Button();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
+			this.btnExit = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -82,7 +83,7 @@ namespace Banking_Simulator_App
 			this.btnDeposit.BackColor = System.Drawing.Color.NavajoWhite;
 			this.btnDeposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnDeposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnDeposit.Location = new System.Drawing.Point(115, 235);
+			this.btnDeposit.Location = new System.Drawing.Point(25, 239);
 			this.btnDeposit.Name = "btnDeposit";
 			this.btnDeposit.Size = new System.Drawing.Size(263, 62);
 			this.btnDeposit.TabIndex = 3;
@@ -106,12 +107,26 @@ namespace Banking_Simulator_App
 			this.label4.TabIndex = 5;
 			this.label4.Text = resources.GetString("label4.Text");
 			// 
+			// btnExit
+			// 
+			this.btnExit.BackColor = System.Drawing.Color.NavajoWhite;
+			this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnExit.Location = new System.Drawing.Point(336, 239);
+			this.btnExit.Name = "btnExit";
+			this.btnExit.Size = new System.Drawing.Size(121, 62);
+			this.btnExit.TabIndex = 6;
+			this.btnExit.Text = "Exit";
+			this.btnExit.UseVisualStyleBackColor = false;
+			this.btnExit.Click += new System.EventHandler(this.BtnExitClick);
+			// 
 			// DepositForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Bisque;
 			this.ClientSize = new System.Drawing.Size(479, 339);
+			this.Controls.Add(this.btnExit);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.btnDeposit);
 			this.Controls.Add(this.tbxDepositMoney);
@@ -127,6 +142,7 @@ namespace Banking_Simulator_App
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Button btnExit;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Button btnDeposit;

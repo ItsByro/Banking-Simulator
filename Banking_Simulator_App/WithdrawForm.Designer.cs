@@ -41,6 +41,7 @@ namespace Banking_Simulator_App
 			this.label4 = new System.Windows.Forms.Label();
 			this.tbxWithdrawMoney = new System.Windows.Forms.TextBox();
 			this.btnWithdraw = new System.Windows.Forms.Button();
+			this.btnExit = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label3
@@ -98,7 +99,7 @@ namespace Banking_Simulator_App
 			this.btnWithdraw.BackColor = System.Drawing.Color.NavajoWhite;
 			this.btnWithdraw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnWithdraw.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnWithdraw.Location = new System.Drawing.Point(101, 213);
+			this.btnWithdraw.Location = new System.Drawing.Point(25, 221);
 			this.btnWithdraw.Name = "btnWithdraw";
 			this.btnWithdraw.Size = new System.Drawing.Size(263, 62);
 			this.btnWithdraw.TabIndex = 10;
@@ -106,12 +107,26 @@ namespace Banking_Simulator_App
 			this.btnWithdraw.UseVisualStyleBackColor = false;
 			this.btnWithdraw.Click += new System.EventHandler(this.BtnWithdrawClick);
 			// 
+			// btnExit
+			// 
+			this.btnExit.BackColor = System.Drawing.Color.NavajoWhite;
+			this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnExit.Location = new System.Drawing.Point(327, 221);
+			this.btnExit.Name = "btnExit";
+			this.btnExit.Size = new System.Drawing.Size(121, 62);
+			this.btnExit.TabIndex = 11;
+			this.btnExit.Text = "Exit";
+			this.btnExit.UseVisualStyleBackColor = false;
+			this.btnExit.Click += new System.EventHandler(this.BtnExitClick);
+			// 
 			// WithdrawForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Bisque;
 			this.ClientSize = new System.Drawing.Size(467, 327);
+			this.Controls.Add(this.btnExit);
 			this.Controls.Add(this.btnWithdraw);
 			this.Controls.Add(this.tbxWithdrawMoney);
 			this.Controls.Add(this.label4);
@@ -127,6 +142,7 @@ namespace Banking_Simulator_App
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Button btnExit;
 		private System.Windows.Forms.Button btnWithdraw;
 		private System.Windows.Forms.TextBox tbxWithdrawMoney;
 		private System.Windows.Forms.Label label4;

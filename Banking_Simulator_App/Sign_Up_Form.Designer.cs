@@ -227,9 +227,9 @@ namespace Banking_Simulator_App
 			// 
 			// checkboxTermsCondition
 			// 
-			this.checkboxTermsCondition.Location = new System.Drawing.Point(26, 505);
+			this.checkboxTermsCondition.Location = new System.Drawing.Point(12, 519);
 			this.checkboxTermsCondition.Name = "checkboxTermsCondition";
-			this.checkboxTermsCondition.Size = new System.Drawing.Size(450, 77);
+			this.checkboxTermsCondition.Size = new System.Drawing.Size(450, 95);
 			this.checkboxTermsCondition.TabIndex = 16;
 			this.checkboxTermsCondition.UseVisualStyleBackColor = true;
 			// 
